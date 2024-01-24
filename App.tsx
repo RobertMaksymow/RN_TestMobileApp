@@ -3,11 +3,13 @@ import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
 
 function App(): React.JSX.Element {
+  console.log('Hello from console.log');
+
   return (
     <SafeAreaView>
       <StatusBar />
       <View>
-        <Text>React Native Concepts:</Text>
+        <Text style={styles.header}>React Native Concepts and Features:</Text>
       </View>
       <View>
         <Text>Splash Screen</Text>
@@ -42,6 +44,10 @@ function App(): React.JSX.Element {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  header: {
+    fontWeight: 'bold',
+  },
+});
 
 export default App;
