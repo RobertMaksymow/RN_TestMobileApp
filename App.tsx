@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
 import {
   Image,
@@ -13,14 +14,19 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback,
 } from 'react-native';
+import ButtonsScreen from './src/screens/ButtonsScreen';
+import ImagesScreen from './src/screens/ImagesScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import MyAccountScreen from './src/screens/MyAccountScreen';
 
 function App(): React.JSX.Element {
   console.log('Hello from console.log');
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <ScrollView>
+    <NavigationContainer>
+      <SafeAreaView>
+        <StatusBar />
+        {/* <ScrollView>
         <View>
           <Text style={styles.header}>React Native Concepts and Features:</Text>
         </View>
@@ -118,8 +124,13 @@ function App(): React.JSX.Element {
         <View>
           <Text>Buttons: 1h 04min </Text>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+      </ScrollView> */}
+        <HomeScreen />
+        <ButtonsScreen />
+        <ImagesScreen />
+        <MyAccountScreen />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
